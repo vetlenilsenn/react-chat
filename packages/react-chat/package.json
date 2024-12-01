@@ -8,7 +8,7 @@
     "iframe",
     "voiceflow"
   ],
-  "homepage": "https://vetlenilsenn.github.io/react-chat"",
+  "homepage": "https://github.com/voiceflow/react-chat#readme",
   "bugs": {
     "url": "https://github.com/voiceflow/react-chat/issues"
   },
@@ -28,6 +28,8 @@
     "build:storybook": "storybook build -o docs",
     "chromatic:publish": "npx chromatic --project-token $CHROMATIC_PROJECT_TOKEN --build-script-name build:storybook",
     "clean": "yarn g:rimraf build dist",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "dev": "storybook dev -p 6006",
     "lint": "yarn g:run-p -c lint:eslint lint:prettier",
     "lint:eslint": "yarn g:eslint",
@@ -41,9 +43,7 @@
     "test:dependencies": "yarn g:depcruise",
     "test:e2e": "yarn playwright test",
     "test:types": "yarn g:tsc --noEmit",
-    "test:unit": "yarn g:vitest run --coverage",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "test:unit": "yarn g:vitest run --coverage"
   },
   "dependencies": {
     "@voiceflow/base-types": "2.113.1",
