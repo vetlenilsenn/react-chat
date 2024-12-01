@@ -15,8 +15,8 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src', 'package.entry.ts'),
       name: 'voiceflow-chat',
-      fileName: (format) => `index.${format}.js`,
-      formats: ['es', 'cjs'],
+      fileName: () => `bundle.mjs`, // Generate bundle.mjs as the output file
+      formats: ['es'], // Only generate an ES module
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
