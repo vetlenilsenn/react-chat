@@ -41,7 +41,7 @@
     "test:dependencies": "yarn g:depcruise",
     "test:e2e": "yarn playwright test",
     "test:types": "yarn g:tsc --noEmit",
-    "test:unit": "yarn g:vitest run --coverage"
+    "test:unit": "yarn g:vitest run --coverage",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
